@@ -1,0 +1,18 @@
+{
+  "name": "noblock",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "清除页面广告",
+  "permissions": ["http://*/"],
+  "icons": {
+    "32": "eye.png"
+  },
+  "browser_action": {
+    "default_icon": "eye.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [{
+        "matches": ["http://*/", "https://*/", "http://*/*", "https://*/*"],
+        "js": ["js/jquery-1.10.2.js", "js/deleteAds.js"]
+    }]
+}
